@@ -1,0 +1,44 @@
+<div class="stockCard">
+    <div class="stockBody">
+
+        <div class="topContent">
+            <h1>
+                {{ stock.name }} ({{ stock.id|uppercase }})
+            </h1>
+            <button (click)="deleteStock()" id="remove{{stock.id}}"
+                    style="background: transparent; max-height: 24px; max-width: 24px;">
+                X
+            </button>
+        </div>
+
+
+        <div class="valuesContent">
+            <span>
+                Change today: <span *ngIf="stock.quote.d > 0">+</span>{{ stock.quote.d | percent }}
+            </span>
+
+            <span>
+                opening price: {{ stock.quote.o | currency }}
+            </span>
+
+
+        </div>
+        <div class="valuesContent">
+            <span>
+                Current Price: {{ stock.quote.c | currency }}
+            </span>
+            <span>
+                High Price: {{ stock.quote.h | currency }}
+            </span>
+        </div>
+
+        <div class="arrowContainer">
+            <i [ngClass]="stock.quote.d >= 0 ? 'arrow up' : 'arrow down'"> </i>
+        </div>
+
+
+        <button class="detailsButton" id="sentiment{{stock.id}}" (click)="navigateToSentiment(stock.id)" >
+            Go to social sentiment details >
+        </button>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div>
+    <h3> Stock history {{stockName}} ({{symbol}})</h3>
+</div>
+
+<div class="sentiment-detail">
+  <div>
+    <div class="sentiment" *ngFor="let month of history">
+      <p>{{getMonth(month.month)}}</p>
+      <p>Change: {{month.change}}<p>
+      <p>MSPR: {{month.mspr}}</p>
+      <div class="sentiment ">
+          <i [ngClass]="month.change >= 0 ? 'arrow up' : 'arrow down'"> </i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="go-back" id="backBtn" (click)="goBack()"> < Back to list of stocks</button>
+
+

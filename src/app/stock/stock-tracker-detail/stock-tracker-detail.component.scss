@@ -1,0 +1,42 @@
+.arrowContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 500px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 15px 15px 0;
+  display: inline-block;
+  padding: 15px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+}
+
+.stockCard {
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 10px
+}
+
+.stockBody {
+  padding: 10px;
+}
+
+.topContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.valuesContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px
+}

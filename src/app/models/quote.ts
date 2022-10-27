@@ -1,4 +1,4 @@
-export interface Qoute {
+export interface Quote {
     c: number, //current price
     d: number,
     dp: number, //percent change

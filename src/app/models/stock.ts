@@ -1,8 +1,7 @@
+import {Quote} from "./quote";
+
 export interface Stock {
   id: string,
   name: string,
-  changeToday: number,
-  openingPrice: number,
-  currentPrice: number,
-  highPrice: number
+  quote: Quote | null
 }
