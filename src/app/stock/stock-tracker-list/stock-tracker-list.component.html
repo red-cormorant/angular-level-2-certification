@@ -1,0 +1,12 @@
+<div>
+  <h4>Enter the symbol of a stock to track(i.e. APPL, TSLA, GOOGL)</h4>
+</div>
+<div>
+    <form [formGroup]="symbolForm" (ngSubmit)="searchId()">
+        <input id="stockInput" formControlName="stockId" >
+
+  <button id="trackBtn" type="submit" [disabled]="symbolForm.invalid">Track Stock</button>
+    </form>
+</div>
+
+<stock-tracker-detail *ngIf="isSearcheadId" > [stock] = "currentStock"</stock-tracker-detail>
